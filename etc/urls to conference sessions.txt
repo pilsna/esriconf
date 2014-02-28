@@ -1,0 +1,11 @@
+urls to conference sessions
+
+All conferences
+http://cdh.esri.com/?callback=jQuery110205321786182466894_1393496464723&action=getGlobalData&_=1393496464724
+
+Developer Summit 2014
+http://cdh.esri.com/?callback=jQuery110205453785376157612_1393496850790&action=getWebAppData&confid=62&languageCode=en&_=1393496850792
+
+Esri Partner Conference 2014
+http://cdh.esri.com/?callback=jQuery110205321786182466894_1393496464723&action=getWebAppData&confid=61&languageCode=en&_=1393496464725
+
