@@ -9,18 +9,25 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="js/knockout-3.0.0.js"></script>
         <script src="js/jquery-2.1.0.min.js"></script>
-
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
     </head>
     <body>
-    <ul data-bind="foreach: sessions">
-        <li>
-            <span data-bind="text: sessionTitle"></span>...
-            <span data-bind="text: room"></span>
-            <br /><span data-bind="text: startDate"></span> -
-            <span data-bind="text: endDate"></span>
+    <ul class="sessionlist" data-bind="foreach: sessions">
+        <li class="sessionitem">
+            <div class="sessionhead">
+                <span data-bind="text: sessionTitle"></span>
+                <br /><span data-bind="text: room"></span>
+            </div>
+            <div class="date">
+                <span data-bind="text: startDate"></span>
+                <br /><span data-bind="text: endDate"></span>
+            </div>
+            <div class="sessiondescription">
+
+            </div>
         </li>
     </ul>
     </body>
