@@ -12,6 +12,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/knockout-3.0.0.js"></script>
     <script src="js/jquery-2.1.0.min.js"></script>
@@ -28,11 +29,13 @@
         <ul class="sessionlist" data-bind="foreach: sessions">
             <li class="sessionitem" data-bind="click: $parent.expand, css { selected: offeringID == $parent.expandedParagraph()">
                 <div class="sessionhead">
-                    <span class="title" data-bind="text: sessionTitle"></span>
-                    <br />
-                    <span class="room" data-bind="text: room"></span>
+                    <div class="sessioninfo">
+                        <span class="title" data-bind="text: sessionTitle"></span>
+                        <br />
+                        <span class="room" data-bind="text: room"></span>
+                    </div>
                     <div class="date" data-bind="css: 'oclock' + startHour">
-                        <span class="weekday" data-bind="text: day(startDay)"></span>
+                        <div class="weekday" data-bind="text: day(startDay)"></div>
                         <div class="clock">
                             <span data-bind="text: preZero(startHour)"></span><span data-bind="text: postZero(startMinute)"></span>
                             <br />

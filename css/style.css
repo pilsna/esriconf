@@ -1,51 +1,54 @@
 * {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-body, div, ul, li {
-	margin: 0;
-	padding: 0;
-}
 body {
-	margin-left:  5px;
+
 	font-family: 'dosis', sans-serif;
 }
 #container {
 	display: none;
 }
-
+h1 {
+	padding: 10px;
+}
 .sessionlist {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
 }
 .sessionitem {
-	padding-bottom: 10px;
+	box-shadow: 1px 1px 2px rgba(50, 50, 50, 0.55);
+	padding: 8px;
 	border: 0px solid #d9d9d9;
+	margin-bottom: 3px;
 
 }
 .selected{
 	background-color: #EEEEFC;
 }
+.sessioninfo { 
+	position: relative;
+}
 .sessionhead {
 	position:relative;
-	min-height: 58px;
-	padding-right: 120px;
+	height: 58px;
+	margin-right: 120px;
 	width:100%;
 }
 
 .date {
+	padding: 5px;
 	position:absolute;
-	right: 10px;
-	top: 7px;
-	width: 100px;
-	height: 44px;
-	overflow: hidden;
+	right: 8px;
+	top: 8px;
+	height: 42px;
 	color: white;
-	/*background-color: #2C76FF; */
-	padding: 2px;
+
 }
-.oclock8, .oclock12, .oclock16 {
+.oclock8, .oclock12, .oclock16, .oclock20 {
 	background-color: #AA3753;
 }
 .oclock9, .oclock13, .oclock17 {
@@ -61,18 +64,17 @@ body {
 	font-family: 'm-1m', monospace;
 	font-size: .9em;
 	display: inline-block;
-	padding-left: 4px;
+	margin-left: 5px;
 }
-
 .weekday {
 	font-family: 'm-1m', monospace;
-
 	font-weight: bold;
 	font-size: 2em;
+	float: left;
 }
 .sessiondescription {
 	min-height: 25px;
-	margin-bottom: 30px;
+	padding-bottom: 30px;
 }
 .save {
 	font-weight: bold;
@@ -82,8 +84,11 @@ body {
 	background-color: black;
 	color: white;
 	padding: 4px;
-	width: 100px;
+	width: 82px;
 	height: 30px;
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;
 }
 .exp {
 	display: block;
