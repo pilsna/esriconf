@@ -2,34 +2,52 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/knockout-3.0.0.js"></script>
-        <script src="js/jquery-2.1.0.min.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-    <ul class="sessionlist" data-bind="foreach: sessions">
-        <li class="sessionitem">
-            <div class="sessionhead">
-                <span data-bind="text: sessionTitle"></span>
-                <br /><span data-bind="text: room"></span>
-            </div>
-            <div class="date">
-                <span data-bind="text: startDate"></span>
-                <br /><span data-bind="text: endDate"></span>
-            </div>
-            <div class="sessiondescription">
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-            </div>
-        </li>
-    </ul>
-    </body>
-        <script src="js/program.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/knockout-3.0.0.js"></script>
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/lz-string-1.3.3-min.js"></script>
+    <script src="//use.edgefonts.net/m-1m;asap;dosis.js"></script>
+
+</head>
+
+<body>
+    <h1>
+        Esri Developer Summit 2014
+    </h1>
+    <div id="container" >
+        <ul class="sessionlist" data-bind="foreach: sessions">
+            <li class="sessionitem" data-bind="click: $parent.expand, css { selected: offeringID == $parent.expandedParagraph()">
+                <div class="sessionhead">
+                    <span class="title" data-bind="text: sessionTitle"></span>
+                    <br />
+                    <span class="room" data-bind="text: room"></span>
+                    <div class="date" data-bind="css: 'oclock' + startHour">
+                        <span class="weekday" data-bind="text: day(startDay)"></span>
+                        <div class="clock">
+                            <span data-bind="text: preZero(startHour)"></span><span data-bind="text: postZero(startMinute)"></span>
+                            <br />
+                            <span data-bind="text: preZero(endHour)"></span><span data-bind="text: postZero(endMinute)"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sessiondescription" data-bind="visible: offeringID == $parent.expandedParagraph()">
+                    <span data-bind="text: sessionDescription"></span><br/>
+                    <div class="save" data-bind="click: $parent.saveSession">Save</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="js/program.js"></script>
+
 </html>

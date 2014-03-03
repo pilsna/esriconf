@@ -1,31 +1,102 @@
 * {
 	box-sizing: border-box;
 }
-body {
-	font-family: 'Roboto Slab', serif;
-}
+
 body, div, ul, li {
 	margin: 0;
 	padding: 0;
 }
+body {
+	margin-left:  5px;
+	font-family: 'dosis', sans-serif;
+}
+#container {
+	display: none;
+}
+
 .sessionlist {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
 }
 .sessionitem {
-	border-bottom: 1px solid #d9d9d9;
+	padding-bottom: 10px;
+	border: 0px solid #d9d9d9;
 
+}
+.selected{
+	background-color: #EEEEFC;
 }
 .sessionhead {
-	  position: absolute;
-	  left: 0px;
-	  width: 80%;
+	position:relative;
+	min-height: 58px;
+	padding-right: 120px;
+	width:100%;
 }
+
 .date {
+	position:absolute;
+	right: 10px;
+	top: 7px;
 	width: 100px;
-	margin-left: 80%;
+	height: 44px;
+	overflow: hidden;
+	color: white;
+	/*background-color: #2C76FF; */
+	padding: 2px;
+}
+.oclock8, .oclock12, .oclock16 {
+	background-color: #AA3753;
+}
+.oclock9, .oclock13, .oclock17 {
+	background-color: #3A3682;
+}
+.oclock10, .oclock14, .oclock18 {
+	background-color: #BA9D3C;
+}
+.oclock11, .oclock15, .oclock19 {
+	background-color: #60A435;
+}
+.clock {
+	font-family: 'm-1m', monospace;
+	font-size: .9em;
+	display: inline-block;
+	padding-left: 4px;
+}
+
+.weekday {
+	font-family: 'm-1m', monospace;
+
+	font-weight: bold;
+	font-size: 2em;
 }
 .sessiondescription {
+	min-height: 25px;
+	margin-bottom: 30px;
+}
+.save {
+	font-weight: bold;
+	position: relative;
+	right: 10px;
+	float:right;
+	background-color: black;
+	color: white;
+	padding: 4px;
+	width: 100px;
+	height: 30px;
+}
+.exp {
+	display: block;
+}
 
+.title {
+	font-weight: bold;
+}
+
+@media only screen and (min-width: 960px){
+	body{
+		width: 700px;
+		margin-left: auto; 
+		margin-right: auto;
+	}
 }
