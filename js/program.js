@@ -1,3 +1,4 @@
+// Formatting
 var zero = function(time, pre){
         var s = time.toString();
         var out;
@@ -25,6 +26,7 @@ var day = function (date){
     var index = date % 7;
     return days[index];
 }
+//compressing data to hash
 var encodeSessions = function(list){
     list.sort(function(a,b){return a - b});
     console.log(list);
@@ -63,6 +65,7 @@ var decodeSessions = function(hash) {
 
 }
 
+// Knockout model
 function Program(sessionsView) {
     var self = this;
 
@@ -100,8 +103,9 @@ var savedSessions = function() {
 
 }
 
+// Loading the data
 $.ajax({
-    url: "etc/devsummit.json",
+    url: "../data/devsummit.json",
     dataType: "json",
     success: function(response) {
         var prog = new Program(response.sessionsView);
@@ -113,5 +117,4 @@ $.ajax({
         $("#container").fadeIn(400);
     }
 });
-//$('#container').fadeIn(200);
 
