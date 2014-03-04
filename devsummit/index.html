@@ -27,13 +27,8 @@
     </h1>
     <div id="container" >
         <ul class="sessionlist" data-bind="foreach: sessions">
-            <li class="sessionitem" data-bind="click: $parent.expand, css { selected: offeringID == $parent.expandedParagraph()">
-                <div class="sessionhead">
-                    <div class="sessioninfo">
-                        <span class="title" data-bind="text: sessionTitle"></span>
-                        <br />
-                        <span class="room" data-bind="text: room"></span>
-                    </div>
+            <li class="sessionitem" data-bind="attr: { id: 'item_' + offeringID}, click: $parent.expand, css { selected: offeringID == $parent.expandedParagraph()">
+                <div class="sessionhead" data-bind="attr: { id: 'session_' + offeringID } ">
                     <div class="date" data-bind="css: 'oclock' + startHour">
                         <div class="weekday" data-bind="text: day(startDay)"></div>
                         <div class="clock">
@@ -42,8 +37,13 @@
                             <span data-bind="text: preZero(endHour)"></span><span data-bind="text: postZero(endMinute)"></span>
                         </div>
                     </div>
+                    <div class="sessioninfo">
+                        <span class="title" data-bind="text: sessionTitle"></span>
+                        <br />
+                        <span class="room" data-bind="text: room"></span>
+                    </div>
                 </div>
-                <div class="sessiondescription" data-bind="visible: offeringID == $parent.expandedParagraph()">
+                <div class="sessiondescription" data-bind="attr: { id: 'descr_' + offeringID}, visible: offeringID == $parent.expandedParagraph()">
                     <p class="contacts" data-bind="text: contacts"></p>
                     <span data-bind="text: sessionDescription"></span><br/>
                     <div class="save" data-bind="click: $parent.saveSession">Save</div>

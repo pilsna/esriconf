@@ -21,7 +21,6 @@ var preZero = function (time) {
 }
 var day = function (date){
     //only valid in March 2014: partner conf + devsummit
-    //var days = ['Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu'];
     var days = ['Fr', 'Sa', 'Su', 'Mo', 'Tu', 'We', 'Th'];
     var index = date % 7;
     return days[index];
@@ -85,10 +84,19 @@ function Program(sessionsView) {
     self.removeSession = function() {
         self.sessions.remove(this);
     };
-    self.expand = function() {
+    self.expand = function(row, event) {
         if (self.expandedParagraph() !== this.offeringID) {
+            var previous = $('#descr_' + self.expandedParagraph());
+            var prevItem = $('#item_' + self.expandedParagraph());
             self.expandedParagraph(this.offeringID);
-            console.log(self.expandedParagraph());
+            if (previous.length > 0) {
+                var currentItem = $('#item_' + this.offeringID); 
+                var list = $('li');
+                if (list.index(prevItem) < list.index(currentItem)) {
+                    window.scrollBy(0, -previous.height() +40);
+                    //currentItem[0].scrollIntoView(false);
+                }
+            }
         }
     }
     
