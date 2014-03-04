@@ -63,6 +63,18 @@ h1 {
 .oclock11, .oclock15, .oclock19 {
 	background-color: #60A435;
 }
+.day7, .day11 {
+	background-color: #AA3753;
+}
+.day8, .day12 {
+	background-color: #3A3682;
+}
+.day9, .day13 {
+	background-color: #BA9D3C;
+}
+.day10, .day14 {
+	background-color: #60A435;
+}
 .clock {
 	font-family: 'm-1m', monospace;
 	font-size: .9em;
