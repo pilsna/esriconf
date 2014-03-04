@@ -76,6 +76,9 @@ h1 {
 	min-height: 25px;
 	padding-bottom: 30px;
 }
+.contacts {
+	margin-top: 0px;
+}
 .save {
 	font-weight: bold;
 	position: relative;

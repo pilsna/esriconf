@@ -44,6 +44,7 @@
                     </div>
                 </div>
                 <div class="sessiondescription" data-bind="visible: offeringID == $parent.expandedParagraph()">
+                    <p class="contacts" data-bind="text: contacts"></p>
                     <span data-bind="text: sessionDescription"></span><br/>
                     <div class="save" data-bind="click: $parent.saveSession">Save</div>
                 </div>
