@@ -17,7 +17,7 @@
     <script src="../../js/knockout-3.0.0.js"></script>
     <script src="../../js/jquery-2.1.0.min.js"></script>
     <script src="../../js/lz-string-1.3.3-min.js"></script>
-    <script src="//use.edgefonts.net/m-1m;asap;dosis.js"></script>
+    <script src="//use.edgefonts.net/m-1m;merriweather;dosis.js"></script>
     <script src="../../js/program.js"></script>
 </head>
 
@@ -27,7 +27,7 @@
     </h1>
     <div id="container" >
         <ul class="sessionlist" data-bind="foreach: sessions">
-            <li class="sessionitem" data-bind="attr: { id: 'item_' + offeringID}, click: $parent.expand, css { selected: offeringID == $parent.expandedParagraph()">
+            <li class="sessionitem" data-bind="attr: { id: 'item_' + offeringID } , click: $parent.expand">
                 <div class="sessionhead" data-bind="attr: { id: 'session_' + offeringID } ">
                     <div class="date" data-bind="css: 'day' + startDay">
                         <div class="weekday" data-bind="text: day(startDay)"></div>
@@ -45,12 +45,17 @@
                 </div>
                 <div class="sessiondescription" data-bind="attr: { id: 'descr_' + offeringID}, visible: offeringID == $parent.expandedParagraph()">
                     <p class="contacts" data-bind="text: contacts"></p>
-                    <span data-bind="text: sessionDescription"></span><br/>
-                    <div class="save" data-bind="click: $parent.saveSession">Save</div>
+                    <p data-bind="html: sessionDescription"></p>
+                    <div class="save" data-bind="click: $parent.saveSession, css: 'notsaved', attr: { id: 'btn_' + offeringID }">Save</div>
                 </div>
             </li>
         </ul>
     </div>
+    <br />
+    <br />
+    <br />
+    <br />
+
 </body>
 <script src="../../js/devsummit.js"></script>
 <script src="../../js/ganalytics.js"></script>

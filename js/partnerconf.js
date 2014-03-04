@@ -8,6 +8,9 @@ $.ajax({
         var sessionList = savedSessions();
         if (sessionList) {
             prog.selectedSessions = sessionList;
+            $.each(sessionList, function(index, item){
+                prog.selectItem(item, true);
+            });
         }
         $("#container").fadeIn(400);
     }

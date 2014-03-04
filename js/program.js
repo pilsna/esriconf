@@ -74,17 +74,41 @@ function Program(sessionsView) {
 
     self.saveSession = function() {
         var id = parseInt(this.offeringID);
-        if (self.selectedSessions.indexOf(id) == -1){
+        var index = self.selectedSessions.indexOf(id);
+        if (index == -1){
             self.selectedSessions.push(id);
+            self.selectItem(this.offeringID, true);
+        } else {
+            self.selectedSessions.splice(index, 1);
+            self.selectItem(this.offeringID, false);
+        }
             var urlparam = encodeSessions(self.selectedSessions);
             window.location.hash = urlparam;
-        }
     };
 
     self.removeSession = function() {
-        self.sessions.remove(this);
+        self.selectedSessions.remove(this);
+
+    };
+    self.selectItem = function(offeringID, enable) {
+        if (enable) {
+            var btn = $('#btn_' + offeringID);
+            btn.text('Saved');
+            btn.removeClass('notsaved');
+            btn.addClass('saved');
+            $('#item_' + offeringID).addClass('selected');
+        } else {
+            var btn = $('#btn_' + offeringID);
+            btn.text('Save');
+            btn.removeClass('saved');
+            btn.addClass('notsaved');
+            $('#item_' + offeringID).removeClass('selected');
+        }
     };
     self.expand = function(row, event) {
+        //var selected = self.selectedSessions.indexOf(parseInt(this.offeringID)) > -1;
+            //self.selectItem(this.offeringID, selected);
+
         if (self.expandedParagraph() !== this.offeringID) {
             var previous = $('#descr_' + self.expandedParagraph());
             var prevItem = $('#item_' + self.expandedParagraph());
@@ -103,7 +127,6 @@ function Program(sessionsView) {
 
 }
 var savedSessions = function() {
-    console.log(self.selectedSessions);
     if (window.location.hash) {
         var list = decodeSessions(window.location.hash);
         return list;

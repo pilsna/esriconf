@@ -27,7 +27,9 @@ h1 {
 	margin-bottom: 3px;
 }
 .selected{
-	background-color: #EEEEFC;
+	border: 0px solid #8A1608;
+	box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.75);
+	background-color: #EEEEEE;
 }
 .sessioninfo { 
 	position: relative;
@@ -101,7 +103,6 @@ h1 {
 	position: relative;
 	right: 0px;
 	float:right;
-	background-color: black;
 	color: white;
 	padding: 4px;
 	width: 78px;
@@ -109,6 +110,12 @@ h1 {
 	margin: auto;
 	text-align: center;
 	vertical-align: middle;
+}
+.saved {
+	background-color: #8A1608;
+}
+.notsaved {
+	background-color: #0D0201; 
 }
 .exp {
 	display: block;
