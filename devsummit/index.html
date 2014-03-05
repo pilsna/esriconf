@@ -29,7 +29,7 @@
         <ul class="sessionlist" data-bind="foreach: sessions">
             <li class="sessionitem" data-bind="attr: { id: 'item_' + offeringID } , click: $parent.expand">
                 <div class="sessionhead" data-bind="attr: { id: 'session_' + offeringID } ">
-                    <div class="date" data-bind="css: 'day' + startDay">
+                    <div class="date" data-bind="css: 'day' + startDay + ' oclock' + startHour">
                         <div class="weekday" data-bind="text: day(startDay)"></div>
                         <div class="clock">
                             <span data-bind="text: preZero(startHour)"></span><span data-bind="text: postZero(startMinute)"></span>

@@ -5,7 +5,7 @@
 }
 
 body {
-
+	background-color: #FFF;
 	font-family: 'dosis', sans-serif;
 }
 #container {
@@ -53,18 +53,16 @@ h1 {
 	height: 42px;
 	color: white;
 }
-.oclock8, .oclock12, .oclock16, .oclock20 {
-	background-color: #AA3753;
+.oclock8, .oclock9, .oclock10, .oclock11 {
+	opacity: .8;
 }
-.oclock9, .oclock13, .oclock17 {
-	background-color: #3A3682;
+.oclock12, .oclock13, .oclock14, .oclock15 {
+	opacity: 1;
 }
-.oclock10, .oclock14, .oclock18 {
-	background-color: #BA9D3C;
+.oclock16, .oclock17, .oclock18, .oclock19 {
+	opacity: 1;
 }
-.oclock11, .oclock15, .oclock19 {
-	background-color: #60A435;
-}
+
 .day7, .day11 {
 	background-color: #AA3753;
 }

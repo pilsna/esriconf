@@ -28,7 +28,7 @@ var day = function (date){
 //compressing data to hash
 var encodeSessions = function(list){
     list.sort(function(a,b){return a - b});
-    console.log(list);
+
     var last = list[0];
     var miniList = [];
     miniList.push(last);
@@ -37,7 +37,6 @@ var encodeSessions = function(list){
         last = list[i];
     };
 
-    console.log(miniList);
     var string = miniList.toString();
 
     var compressed = LZString.compressToBase64(string);
@@ -59,7 +58,6 @@ var decodeSessions = function(hash) {
         }
         previous = origList[i];
     }
-    console.log(origList);
     return origList;
 
 }
@@ -121,6 +119,15 @@ function Program(sessionsView) {
                     //currentItem[0].scrollIntoView(false);
                 }
             }
+        }
+    }
+    self.opacity = function (row, event) {
+        if (row.startHour < 12){
+            return 0.4;
+        } else if (row.startHour < 16) {
+            return 0.7;
+        } else {
+            return 1;
         }
     }
     
