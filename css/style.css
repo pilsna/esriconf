@@ -61,6 +61,7 @@ h1 {
 }
 .oclock16, .oclock17, .oclock18, .oclock19 {
 	opacity: 1;
+
 }
 
 .day7, .day11 {
@@ -86,6 +87,7 @@ h1 {
 	font-weight: bold;
 	font-size: 2em;
 	float: left;
+	clear: none;
 	padding-left: 2px;
 }
 .sessiondescription {
