@@ -6,13 +6,14 @@
 
 body {
 	background-color: #FFF;
-	font-family: 'dosis', sans-serif;
+	font-family: 'Gudea', sans-serif;
 }
 #container {
 	display: none;
+	font-size: .9em;
 }
 h1 {
-	padding: 5px;
+	padding: 3px;
 	font-size: 1.6em;
 }
 .sessionlist {
@@ -22,7 +23,7 @@ h1 {
 }
 .sessionitem {
 	box-shadow: 1px 1px 2px rgba(50, 50, 50, 0.55);
-	padding: 5px;
+	padding: 0px 3px 0px 3px;
 	border: 0px solid #d9d9d9;
 	margin-bottom: 3px;
 }
@@ -40,9 +41,11 @@ h1 {
 	min-height: 48px;
 	margin-right: 120px;
 	width:100%;
+	padding-bottom: 3px;
 }
 
 .date {
+	font-family: 'Ubuntu Mono', monospace;
 	padding: 2px;
 	padding-top: 5px;
 	position:relative;
@@ -77,14 +80,12 @@ h1 {
 	background-color: #60A435;
 }
 .clock {
-	font-family: 'm-1m', monospace;
-	font-size: .9em;
+	font-size: 1em;
 	margin-left: 40px;
 }
 .weekday {
-	font-family: 'm-1m', monospace;
 	font-weight: bold;
-	font-size: 2em;
+	font-size: 2.1em;
 	float: left;
 	clear: none;
 	padding-left: 2px;
@@ -92,8 +93,9 @@ h1 {
 .sessiondescription {
 	min-height: 25px;
 	padding-bottom: 30px;
+	margin-bottom: 3px
 }
-.contacts {
+.description {
 	margin-top: 0px;
 	margin-bottom: 8px;
 }
@@ -101,6 +103,7 @@ h1 {
 	font-weight: bold;
 	position: relative;
 	right: 0px;
+	bottom: 3px;
 	float:right;
 	color: white;
 	padding: 4px;
