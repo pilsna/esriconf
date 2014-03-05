@@ -32,11 +32,9 @@
                     <div class="date" data-bind="css: 'day' + startDay + ' oclock' + startHour">
                         <div class="weekday" data-bind="text: day(startDay)"></div>
                         <div class="clock">
-                            <span data-bind="text: preZero(startHour)"></span>
-                            <span data-bind="text: postZero(startMinute)"></span>
+                            <span data-bind="text: preZero(startHour)"></span><span data-bind="text: postZero(startMinute)"></span>
                             <br />
-                            <span data-bind="text: preZero(endHour)"></span>
-                            <span data-bind="text: postZero(endMinute)"></span>
+                            <span data-bind="text: preZero(endHour)"></span><span data-bind="text: postZero(endMinute)"></span>
                         </div>
                     </div>
                     <div class="sessioninfo">

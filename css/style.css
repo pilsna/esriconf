@@ -79,8 +79,7 @@ h1 {
 .clock {
 	font-family: 'm-1m', monospace;
 	font-size: .9em;
-	display: inline-block;
-	margin-left: 5px;
+	margin-left: 40px;
 }
 .weekday {
 	font-family: 'm-1m', monospace;
